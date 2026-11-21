@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "YOUR_SUPABASE_POSTGRES_CONNECTION_STRING"
+      ],
+      "env": {}
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+    "stripe": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@stripe/mcp"
+      ],
+      "env": {
+        "STRIPE_SECRET_KEY": "YOUR_STRIPE_TEST_SECRET_KEY"
+      }
+    }
+  }
+}
